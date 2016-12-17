@@ -1,0 +1,31 @@
+<nav>
+<form method = 'post'>
+	<table border="1px">
+	<tr>
+	<td>	
+	<input type = 'checkbox' name = 'coordinator[]' value = 'Ada'> Ada<br>
+	<input type = 'checkbox' name = 'coordinator[]' value = 'Aneta'> Aneta<br>
+	<input type = 'checkbox' name = 'coordinator[]' value = 'Diana'> Diana<br>
+	<input type = 'checkbox' name = 'coordinator[]' value = 'Grzegorz'> Grzegorz<br>
+	<input type = 'checkbox' name = 'coordinator[]' value = 'Leszek'> Leszek<br>
+	<input type = 'checkbox' name = 'coordinator[]' value = 'Weronika'> Weronika<br>
+	<input type = 'checkbox' name = 'coordinator[]' value = 'Piotr'> Piotr<br>
+	<input type = 'checkbox' name = 'coordinator[]' value = 'Brak'> Nie przypisano
+	</td>
+	<td>
+	<input type = 'checkbox' name = 'offer[]' value = 'TP3' > TP3 <br>
+	<input type = 'checkbox' name = 'offer[]' value = 'Polanki'> Polanki<br>
+	<input type = 'checkbox' name = 'offer[]' value = 'Brak'> Brak <br>
+	</td>
+	<td><?php 
+	include_once( 'includes/monitor.php');
+	?>
+	<td>
+	<td>
+
+	</td>
+	<td></td><td></td>
+	</table>
+	<input type = 'submit'   name = "dawaj"   value = "Dawaj dane">
+</form>
+</nav>

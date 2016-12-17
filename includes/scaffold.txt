@@ -1,0 +1,4 @@
+<?php
+define("ROOT", realpath($_SERVER["DOCUMENT_ROOT"]) . "/loid");
+include_once(ROOT . 'includes/header');
+?>

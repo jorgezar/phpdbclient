@@ -1,0 +1,39 @@
+-Jak wrzód na tkance mojej produktywności: OpenID
+-problemy z textarea w obszarze display.php
+-popracować nad tabelą w sekcji display: dodaj nagłówki, 
+-województwo w sekcji display/update powinno być rozwijaną listą z wyborami
+-przycisk UMOWA
+-gdzie umieścić menu zawierania umów?
+-zmienić okienka wpisywania na większe
+-napisać klasę użytkownik - koordynator (Dostęp, wyszukiwanie pod dystrybutora)
+-przerobić bazy danych dla wiekszej jasnosci - tabele identyfikujące oferty i koordynatorów (co pozwoli pobierać indeks ofert i koordynatorów bezposrednio z vbazy danych.)
+-dodać indeksy z czasem wprowadzenia zmiany do tabel pośredniczących.
+-osobna tabela do zapisywania każdej kwerendy
+-tabela przestawna w sql
+-wyłapałem bug odnośnie prawa do zmian
+-problem uniknięcia duplikatów
+-pobieranie danych
+dowiedzieć sie jak ukrywać zmienne w ramach obiektu. żeby print_r nie drukował zawartości interfejsu bazy danych
+UKOŃCZONE
+
+(160214)
++wprowadzić interfejs do połączeń mysql
+(160215)
++tabela display ma się wyświetlać również prz brarku danych bez kiksów
++dodaj przycisk 'powrót'
++ikona dla umowy w obszarze wyszukiwarki
+(160216)
++Dodać Piotra
++wybór koordynatora również z zamkniętej listy w obszarze modyfikacji
+(160217)
++menu z ofertami
++!!!oczywiście ważny jest mechanizm dodawania koordynatorów i składania ofert!!!
+(160225)
++oczyszczenie danych wprowadzanych w obszarze display/inserter
+(160227)
++logowanie użytkownika
++listwa u góry strony z panelem do logowania
++ograniczenie dostępu dla niezalogowanego
+(160229)
++rejestracja mailowa
++panel ustalania hasła

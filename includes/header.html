@@ -1,0 +1,42 @@
+<?php 
+@session_start(); 
+
+include_once('locals/IConnectInfo.php');
+include_once(ROOT . '/models/User.php');
+?>
+
+<!DOCTYPE html>
+<html lang="pl-PL" >
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<title>Prosta wyszukiwarka</title>
+<meta   charset = "UTF-8" http-equiv="Content-type" ><!--
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">-->
+<link rel="stylesheet" href="styles/styles.css"></head>
+
+<nav class="top-menu">
+<?php 
+if (isset($_POST['email']) && isset($_POST['password']))  {
+	$logger = new Logger($_POST['email'], $_POST['password']);
+	if ($logger->get_Id())
+	{
+		$user = new User($logger->get_Id());
+		$_SESSION['user']= $user;
+	}
+}
+if (isset($_SESSION['user'])) {
+	$name= $_SESSION['user']->name;
+	echo "Witaj, $name <a href = 'actions/logout.php'><button type='button 'value = 'Wyloguj się'>Wyloguj się</button></a><a href = 'account.php'><button type='button 'value = 'Moje konto'>Moje konto</button></a>";
+	} else	{
+	echo "<form action = '' method='post'>Email:<input type='text' name = 'email'>Hasło:<input type='password' name = 'password'><input type= 'submit' value = 'Zaloguj się'></form>";
+}  ?> </nav>
+<body class = "main-display"><BR><BR>

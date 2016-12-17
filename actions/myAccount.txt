@@ -1,0 +1,5 @@
+<?php
+echo "<h3>Obejrzyj dane</h3>";
+echo "<br><a href = '../index.php'><button type='button 'value = 'Powrót'>Powrót</button></a>;
+
+?>
